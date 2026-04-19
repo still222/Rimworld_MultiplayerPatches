@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = StkMultiplayerPatch
+build_property.ProjectDir = C:\Program Files (x86)\Steam\steamapps\common\RimWorld\xstk\Source\StkMultiplayerPatch\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
