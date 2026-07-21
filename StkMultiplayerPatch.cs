@@ -24,9 +24,7 @@ public static class Startup
 		);
 
 		if (MP.enabled)
-		{
 			MP.RegisterAll();
-		}
 	}
 
 }
