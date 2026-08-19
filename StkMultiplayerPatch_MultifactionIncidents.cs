@@ -34,7 +34,6 @@ public static class Patch_IncidentWorker_TryExecute_ForMultifactionTriggering
 			map.ParentFaction == Faction.OfPlayer ||
 			map.mapPawns.AnyColonistSpawned)
 		{
-			Log.Message($"[StkMPPatch] Incident greenlit");
 			return true;
 		}
 
@@ -43,14 +42,5 @@ public static class Patch_IncidentWorker_TryExecute_ForMultifactionTriggering
 		__result = true;
 		return false;
 	}
-}
 
-[HarmonyPatch(typeof(LetterStack), nameof(LetterStack.ReceiveLetter), typeof(Letter), typeof(string), typeof(int), typeof(bool))]
-static class LetterStackReceiveFactionDebug
-{
-	// todo the letter might get culled from the archive if it isn't in the stack and Sync depends on the archive
-	static void Prefix()
-	{
-		Log.Message($"[StkMPPatch] Current Incident Faction: {Faction.OfPlayer}");
-	}
 }
