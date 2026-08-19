@@ -10,11 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.2">
       <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
@@ -42,4 +42,10 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Publicize Include="Assembly-CSharp;0Harmony;UnityEngine.IMGUIModule" />
+    <DoNotPublicize Include="0Harmony:System.Runtime.CompilerServices.DefaultInterpolatedStringHandler" />
+  </ItemGroup>
+
 </Project>

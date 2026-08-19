@@ -10,7 +10,7 @@ public static class Startup
 {
 	static Startup()
 	{
-		var harmony = new Harmony("stk.sfw.patcher");
+		var harmony = new Harmony("stk.mp.patcher");
 		harmony.PatchAll();
 		harmony.Unpatch(
 			AccessTools.Method(typeof(SituationalThoughtHandler), "CheckRecalculateSocialThoughts"),
@@ -25,6 +25,7 @@ public static class Startup
 
 		if (MP.enabled)
 		{
+			MP.RegisterSyncMethod(typeof(GameComponent_PsychicRitualManager), nameof(GameComponent_PsychicRitualManager.ClearCooldown));
 		}
 
 	}
